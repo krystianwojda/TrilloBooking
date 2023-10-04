@@ -32,6 +32,8 @@ useHead({
 </template>
 
 <style lang="scss">
+@import "scss/main";
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -40,7 +42,7 @@ html {
   font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
-  border-bottom: 1px solid #f4f2f2;
+  border-bottom: 1px solid $color-grey-light-2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,7 +69,7 @@ html {
     }
 
     & > *:hover {
-      background-color: #F4F2F2FF;
+      background-color: $color-grey-light-2;
     }
 
     &__item-title {
