@@ -22,7 +22,7 @@ useHead({
     </div>
     <!--SEARCH BAR END -->
     <!--USER NAVIGATION-->
-    <nav class="user-nav">
+    <nav class="header__user-nav">
       <div class="user-nav__item">
         <span class="user-nav__item-title">Login</span>
         <img class="user-nav__item-icon" src="@/src/login.png" alt="Login">
@@ -35,7 +35,7 @@ useHead({
     <!--USER NAVIGATION END-->
   </header>
   <!--HEADER END-->
-  <!--HOME-->
+  <!--HERO-->
   <section class="hero">
     <div class="hero__text-box">
       <h2 class="hero__text-box__subtitle">Starting from 400$ only</h2>
@@ -46,7 +46,83 @@ useHead({
       </div>
     </div>
   </section>
-  <!--HOME END-->
+  <!--HERO END-->
+  <!--POPULAR TRAVEL -->
+  <section class="popular-travel">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="popular-travel__title">the best offers</h3>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+              <div class="card">
+                <img class="card__image" src="https://welcometozante.com/wp-content/uploads/2020/11/Zante-citt%C3%A0-1.jpg">
+                <div class="card__information">
+                  <div class="card__information__title">
+                    <span class="card__information__title-place">Hotel Las Palmas</span>
+                    <div class="card__information__title__description">
+                      <span class="card__information__title__description-country">Greece,</span>
+                      <span class="card__information__title__description-city">Zakyntos</span>
+                    </div>
+                  </div>
+                  <div class="card__information__price">$150</div>
+                </div>
+                <div class="card__description">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                </div>
+                <div class="card__button">
+                  <button class="card__btn">show detail</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+              <div class="card">
+                <img class="card__image" src="https://welcometozante.com/wp-content/uploads/2020/11/Zante-citt%C3%A0-1.jpg">
+                <div class="card__information">
+                  <div class="card__information__title">
+                    <span class="card__information__title-place">Hotel Las Palmas</span>
+                    <div class="card__information__title__description">
+                      <span class="card__information__title__description-country">Greece,</span>
+                      <span class="card__information__title__description-city">Zakyntos</span>
+                    </div>
+                  </div>
+                  <div class="card__information__price">$150</div>
+                </div>
+                <div class="card__description">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                </div>
+                <div class="card__button">
+                  <button class="card__btn">show detail</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+              <div class="card">
+                <img class="card__image" src="https://welcometozante.com/wp-content/uploads/2020/11/Zante-citt%C3%A0-1.jpg">
+                <div class="card__information">
+                  <div class="card__information__title">
+                    <span class="card__information__title-place">Hotel Las Palmas</span>
+                    <div class="card__information__title__description">
+                      <span class="card__information__title__description-country">Greece,</span>
+                      <span class="card__information__title__description-city">Zakyntos</span>
+                    </div>
+                  </div>
+                  <div class="card__information__price">$150</div>
+                </div>
+                <div class="card__description">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                </div>
+                <div class="card__button">
+                  <button class="card__btn">show detail</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--POPULAR TRAVEL END -->
 </template>
 
 <style lang="scss">
@@ -128,7 +204,7 @@ body {
     }
   }
 
-  .user-nav {
+  &__user-nav {
     display: flex;
     align-items: center;
     align-self: stretch;
@@ -263,6 +339,104 @@ body {
       background-image: linear-gradient(to right, #ff094f, #850237);
       transform: scale(1.05);
     }
+  }
+}
+
+.popular-travel {
+  padding: 3rem 0;
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .card {
+    min-height: 52rem;
+    background-color: #fff;
+    box-shadow: $color-shadow-dark;
+    border-radius: 15px;
+    margin: 2rem 0;
+    border: none;
+    transition: all .7s;
+
+    &__image {
+      width: 100%;
+      height: 25rem;
+      border-radius: 13px 13px 0 0;
+    }
+
+    &__information {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 1.5rem;
+      border-bottom: $border-line;
+
+      &__title {
+        display: flex;
+        flex-direction: column;
+
+        &-place {
+          text-transform: uppercase;
+          font-size: 2rem;
+          font-weight: 600;
+        }
+
+        &__description {
+          font-weight: 500;
+
+          &-country {
+            font-size: 1.6rem;
+            margin-right: .5rem;
+          }
+
+          &-city {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      &__price {
+        font-size: 4rem;
+        font-weight: 600;
+        color: $color-primary;
+      }
+    }
+
+    &__description {
+      margin: 0 1.5rem 1rem 1.5rem;
+      font-size: 1.4rem;
+    }
+
+    &__button {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+
+      button {
+        padding: .7rem 3rem;
+        font-size: 1.5rem;
+        color: #fff;
+        border: none;
+        font-weight: 300;
+        text-transform: uppercase;
+        border-radius: 100px;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        position: relative;
+        transition: all .7s;
+      }
+
+      button:hover {
+        background-image: linear-gradient(to right, #ff094f, #850237);
+        transform: scale(1.05);
+        box-shadow: $color-shadow-light;
+      }
+    }
+  }
+
+  .card:hover {
+    transform: scale(1.02);
   }
 }
 </style>
