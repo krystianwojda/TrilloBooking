@@ -14,16 +14,16 @@ useHead({
 <template>
   <!--HEADER-->
   <header class="header">
-    <img class="header__logo" src="@/public/logo.png" alt="logo">
+    <img class="header__logo" src="@/src/logo.png" alt="logo">
     <!--USER NAVIGATION-->
     <nav class="user-nav">
       <div class="user-nav__item">
         <span class="user-nav__item-title">Login</span>
-        <img class="user-nav__item-icon" src="@/public/login.png" alt="Login">
+        <img class="user-nav__item-icon" src="@/src/login.png" alt="Login">
       </div>
       <div class="user-nav__item">
         <span class="user-nav__item-title">Register</span>
-        <img class="user-nav__item-icon" src="@/public/new-user.png" alt="Register">
+        <img class="user-nav__item-icon" src="@/src/new-user.png" alt="Register">
       </div>
     </nav>
     <!--USER NAVIGATION-->
@@ -105,7 +105,7 @@ body {
 .hero {
   height: 80vh;
   width: 100%;
-  background-image: linear-gradient(to right, rgba($color-primary, 0.05), rgba($color-primary-dark, 0.35)), url(@/public/hero.jpg);
+  background-image: linear-gradient(to right, rgba($color-primary, 0.05), rgba($color-primary-dark, 0.35)), url(@/src/hero.jpg);
   background-size: cover;
   background-position: top;
   display: flex;
