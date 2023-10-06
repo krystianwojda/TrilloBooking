@@ -373,13 +373,13 @@ body {
 }
 
 .popular-travel {
-  padding: 3rem 0;
+  padding: 8rem 0;
 
   &__title {
     text-transform: uppercase;
-    font-size: 2.2rem;
+    font-size: 3rem;
     color: #fff;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .card {
@@ -387,9 +387,9 @@ body {
     background-color: #fff;
     box-shadow: $color-shadow-dark;
     border-radius: 15px;
-    margin: 2rem 0;
     border: none;
     transition: all .7s;
+    margin-bottom: 2rem;
 
     &__image {
       width: 100%;
