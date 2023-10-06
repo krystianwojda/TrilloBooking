@@ -14,7 +14,10 @@ useHead({
 <template>
   <!--HEADER-->
   <header class="header">
-    <img class="header__logo" src="@/src/logo.png" alt="logo">
+    <div class="header__business">
+      <img class="header__logo" src="@/src/logo.png" alt="logo">
+      <span class="header__name">TrilloBooking</span>
+    </div>
     <!--SEARCH BAR -->
     <div class="header__search-bar">
       <input type="text" class="header__search-bar__input" placeholder="Search your travel">
@@ -176,9 +179,19 @@ body {
   justify-content: space-between;
   align-items: center;
 
+  &__business {
+    display: flex;
+    align-items: center;
+  }
+
   &__logo {
     height: 3.25rem;
-    margin-left: 2rem;
+    margin: 0 1rem 0 2rem;
+  }
+
+  &__name {
+    color: $color-primary;
+    font-size: 2.4rem;
   }
 
   &__search-bar {
