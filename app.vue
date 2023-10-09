@@ -12,7 +12,7 @@ useHead({
 </script>
 
 <template>
-  <the-header/>
+  <!--<the-header/>-->
   <section class="hotel-view">
     <div class="gallery">
       <figure class="gallery__item">
@@ -45,7 +45,7 @@ useHead({
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-7">
+        <div class="col-lg-12 col-xl-7">
           <div class="row">
             <div class="col-12">
               <div class="description">
@@ -69,31 +69,9 @@ useHead({
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-lg-12 col-xl-4">
           <div class="row">
-            <div class="col-12">
-              <div class="opinion">
-                <p class="opinion__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                <div class="opinion__user">
-                  <img src="@/src/user-4.jpg" class="opinion__user-photo" alt="user_image">
-                  <div class="opinion__user__box">
-                    <div class="opinion__user__box-name">Jonas Schwarz</div>
-                    <div class="opinion__user__box-date">Feb 23rd, 2023</div>
-                  </div>
-                  <div class="opinion__user__rating">5</div>
-                </div>
-              </div>
-              <div class="opinion">
-                <p class="opinion__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                <div class="opinion__user">
-                  <img src="@/src/user-4.jpg" class="opinion__user-photo" alt="user_image">
-                  <div class="opinion__user__box">
-                    <div class="opinion__user__box-name">Jonas Schwarz</div>
-                    <div class="opinion__user__box-date">Feb 23rd, 2023</div>
-                  </div>
-                  <div class="opinion__user__rating">3</div>
-                </div>
-              </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-12">
               <div class="opinion">
                 <p class="opinion__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
                 <div class="opinion__user">
@@ -105,9 +83,35 @@ useHead({
                   <div class="opinion__user__rating">4</div>
                 </div>
               </div>
-              <div class="button">
-                <button class="button__btn">Show all</button>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-12">
+              <div class="opinion">
+                <p class="opinion__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <div class="opinion__user">
+                  <img src="@/src/user-4.jpg" class="opinion__user-photo" alt="user_image">
+                  <div class="opinion__user__box">
+                    <div class="opinion__user__box-name">Jonas Schwarz</div>
+                    <div class="opinion__user__box-date">Feb 23rd, 2023</div>
+                  </div>
+                  <div class="opinion__user__rating">4</div>
+                </div>
               </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-12">
+              <div class="opinion">
+                <p class="opinion__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <div class="opinion__user">
+                  <img src="@/src/user-4.jpg" class="opinion__user-photo" alt="user_image">
+                  <div class="opinion__user__box">
+                    <div class="opinion__user__box-name">Jonas Schwarz</div>
+                    <div class="opinion__user__box-date">Feb 23rd, 2023</div>
+                  </div>
+                  <div class="opinion__user__rating">4</div>
+                </div>
+              </div>
+            </div>
+            <div class="button">
+              <button class="button__btn">Show all</button>
             </div>
           </div>
         </div>
@@ -139,6 +143,10 @@ body {
   .gallery {
     display: flex;
 
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+    }
+
     figure {
       margin: 0;
     }
@@ -163,6 +171,21 @@ body {
       padding: 1.75rem 3.5rem;
       font-weight: 300;
       margin: 0;
+
+      @media screen and (max-width: 991px) {
+        font-size: 2.5rem;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 1.75rem;
+        padding: 1.5rem 1.75rem;
+      }
+
+      @media screen and (max-width: 576px) {
+        font-size: 1.5rem;
+        padding: 1.5rem 1.25rem;
+        letter-spacing: 1px;
+      }
     }
 
     &__stars {
@@ -173,6 +196,23 @@ body {
         width: 2.5rem;
         height: 2.5rem;
         margin-right: .75rem;
+
+        @media screen and (max-width: 991px) {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        @media screen and (max-width: 767px) {
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-right: .25rem;
+        }
+
+        @media screen and (max-width: 576px) {
+          width: 1.25rem;
+          height: 1.25rem;
+          margin-right: .25rem;
+        }
       }
     }
 
@@ -181,10 +221,19 @@ body {
       display: flex;
       align-items: center;
 
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+
       &-icon {
         margin-right: 1rem;
         width: 3rem;
         height: 3rem;
+
+        @media screen and (max-width: 991px) {
+          width: 2rem;
+          height: 2rem;
+        }
       }
       &-place {
         color: $color-primary;
@@ -203,10 +252,18 @@ body {
       justify-content: center;
       flex-direction: column;
 
+      @media screen and (max-width: 767px) {
+        margin-left: 1.5rem;
+      }
+
       &-average {
         font-size: 2.25rem;
         font-weight: 300;
         margin-bottom: -3px;
+
+        @media screen and (max-width: 991px) {
+          font-size: 1.75rem;
+        }
       }
 
       &-count {
@@ -217,11 +274,15 @@ body {
   }
 
   .description, .opinion {
-    margin: 2rem 0;
+    margin: 2rem 0 0 0;
     padding: 3rem;
     box-shadow: $color-shadow-light;
     background-color: #fff;
     font-size: 1.6rem;
+
+    @media screen and (max-width: 576px) {
+      font-size: 1.4rem;
+    }
 
     &__paragraph:not(:last-child) {
       margin-bottom: 2rem;
@@ -285,6 +346,10 @@ body {
     display: flex;
     justify-content: center;
     margin: 4rem 0;
+
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
 
     &__btn {
       color: #eb2f64;
