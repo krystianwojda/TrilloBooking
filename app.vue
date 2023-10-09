@@ -13,8 +13,110 @@ useHead({
 
 <template>
   <the-header/>
-  <the-hero/>
-  <the-popular-travel/>
+  <section class="hotel-view">
+    <div class="gallery">
+      <figure class="gallery__item">
+        <img class="gallery__item-photo" src="@/src/hotel-1.jpg" alt="photo">
+      </figure>
+      <figure class="gallery__item">
+        <img class="gallery__item-photo" src="@/src/hotel-2.jpg" alt="photo">
+      </figure>
+      <figure class="gallery__item">
+        <img class="gallery__item-photo" src="@/src/hotel-3.jpg" alt="photo">
+      </figure>
+    </div>
+    <div class="overview">
+      <h1 class="overview__title">hotel las palmas</h1>
+      <div class="overview__stars">
+        <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+        <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+        <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+        <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+        <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+      </div>
+      <div class="overview__location">
+        <img class="overview__location-icon" src="@/src/location.png" alt="Location">
+        <span class="overview__location-place">Greece, Zakyntos</span>
+      </div>
+      <div class="overview__rating">
+        <div class="overview__rating-average">4.7</div>
+        <div class="overview__rating-count">271 votes</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-7">
+          <div class="row">
+            <div class="col-12">
+              <div class="description">
+                <p class="description__paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                <p class="description__paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
+                <p class="description__paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                <p class="description__paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
+                <ul class="description__list">
+                  <li class="description__list-item">Close to the beach</li>
+                  <li class="description__list-item">Breakfat included</li>
+                  <li class="description__list-item">Free airport transport</li>
+                  <li class="description__list-item">Wi-fi in rooms</li>
+                  <li class="description__list-item">Pets allowed</li>
+                  <li class="description__list-item">Free drinks</li>
+                  <li class="description__list-item">Air conditiong and heating</li>
+                  <li class="description__list-item">We speak all languages</li>
+                </ul>
+                <p class="description__paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
+                <p class="description__paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="row">
+            <div class="col-12">
+              <div class="opinion">
+                <p class="opinion__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <div class="opinion__user">
+                  <img src="@/src/user-4.jpg" class="opinion__user-photo" alt="user_image">
+                  <div class="opinion__user__box">
+                    <div class="opinion__user__box-name">Jonas Schwarz</div>
+                    <div class="opinion__user__box-date">Feb 23rd, 2023</div>
+                  </div>
+                  <div class="opinion__user__rating">5</div>
+                </div>
+              </div>
+              <div class="opinion">
+                <p class="opinion__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <div class="opinion__user">
+                  <img src="@/src/user-4.jpg" class="opinion__user-photo" alt="user_image">
+                  <div class="opinion__user__box">
+                    <div class="opinion__user__box-name">Jonas Schwarz</div>
+                    <div class="opinion__user__box-date">Feb 23rd, 2023</div>
+                  </div>
+                  <div class="opinion__user__rating">3</div>
+                </div>
+              </div>
+              <div class="opinion">
+                <p class="opinion__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <div class="opinion__user">
+                  <img src="@/src/user-4.jpg" class="opinion__user-photo" alt="user_image">
+                  <div class="opinion__user__box">
+                    <div class="opinion__user__box-name">Jonas Schwarz</div>
+                    <div class="opinion__user__box-date">Feb 23rd, 2023</div>
+                  </div>
+                  <div class="opinion__user__rating">4</div>
+                </div>
+              </div>
+              <div class="button">
+                <button class="button__btn">Show all</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cta">
+      <button class="cta__button">book now</button>
+    </div>
+  </section>
   <the-footer/>
 </template>
 
@@ -28,5 +130,200 @@ html {
 
 body {
   background-color: $color-primary;
+}
+
+.hotel-view {
+  background-color: $color-grey-light-1;
+  color: $color-grey-dark-2;
+
+  .gallery {
+    display: flex;
+
+    figure {
+      margin: 0;
+    }
+
+    &__item {
+     &-photo {
+       width: 100%;
+       display: block;
+     }
+    }
+  }
+
+  .overview {
+    display: flex;
+    align-items: baseline;
+    border-bottom: $border-line;
+
+    &__title {
+      text-transform: uppercase;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      padding: 1.75rem 3.5rem;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    &__stars {
+      margin-right: auto;
+      display: flex;
+
+      &-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: .75rem;
+      }
+    }
+
+    &__location {
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+
+      &-icon {
+        margin-right: 1rem;
+        width: 3rem;
+        height: 3rem;
+      }
+      &-place {
+        color: $color-primary;
+        text-decoration: underline;
+      }
+    }
+
+    &__rating {
+      background-color: $color-primary;
+      color: white;
+      margin-left: 3rem;
+      padding: 0 2.25rem;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      &-average {
+        font-size: 2.25rem;
+        font-weight: 300;
+        margin-bottom: -3px;
+      }
+
+      &-count {
+        text-transform: uppercase;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .description, .opinion {
+    margin: 2rem 0;
+    padding: 3rem;
+    box-shadow: $color-shadow-light;
+    background-color: #fff;
+    font-size: 1.6rem;
+
+    &__paragraph:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    &__list {
+      margin: 3rem 0;
+      padding: 3rem 0;
+      border-top: $border-line-light;
+      border-bottom: $border-line-light;
+      display: flex;
+      flex-wrap: wrap;
+
+      &-item {
+        list-style: none;
+        flex: 0 0 50%;
+        margin-bottom: .7rem;
+        display: flex;
+        align-items: center;
+      }
+
+      &-item::before {
+        margin-right: .75rem;
+        content: '';
+        display: inline-block;
+        height: 1.5rem;
+        width: 1.5rem;
+        background-image: url("@/src/right-arrow.png");
+        background-position: center;
+      }
+    }
+
+    &__text {
+      margin-bottom: 3.5rem;
+    }
+
+    &__user {
+      display: flex;
+      align-items: center;
+
+      &-photo {
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+      }
+
+      &__box {
+        margin-right: auto;
+      }
+
+      &__rating {
+        font-size: 2.25rem;
+        font-weight: 600;
+        color: $color-primary;
+      }
+    }
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+
+    &__btn {
+      color: #eb2f64;
+      border: none;
+      font-size: 1.5rem;
+      padding-bottom: 2px;
+      display: inline-block;
+      background-color: transparent;
+      cursor: pointer;
+      transition: all .2s;
+    }
+
+    &__btn:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .cta {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+
+    &__button {
+      padding: 1.25rem 4rem;
+      font-size: 1.75rem;
+      color: #fff;
+      border: none;
+      font-weight: 300;
+      text-transform: uppercase;
+      border-radius: 100px;
+      background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+      position: relative;
+      transition: all .7s;
+    }
+
+    &__button:hover {
+      background-image: linear-gradient(to right, #ff094f, #850237);
+      transform: scale(1.05);
+    }
+  }
 }
 </style>
