@@ -22,6 +22,11 @@
     height: 7rem;
     color: #777;
 
+    @media screen and (max-width: 576px) {
+      height: 5rem;
+      padding: 0 1rem;
+    }
+
     & > * {
       padding: 0 2rem;
       cursor: pointer;
@@ -29,6 +34,11 @@
       display: flex;
       align-items: center;
       position: relative;
+
+      @media screen and (max-width: 576px) {
+        height: 5rem;
+        padding: 0 .5rem;
+      }
     }
 
     & > *:hover {
@@ -37,13 +47,23 @@
 
     &__item {
       &-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
         margin-right: 1rem;
+
+        @media screen and (max-width: 576px) {
+          font-size: 1.5rem;
+          margin-right: .25rem;
+        }
       }
 
       &-icon {
         width: 3rem;
         height: 3rem;
+
+        @media screen and (max-width: 576px) {
+          width: 2.25rem;
+          height: 2.25rem;
+        }
       }
     }
   }
