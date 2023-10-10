@@ -24,7 +24,6 @@
 
     @media screen and (max-width: 576px) {
       height: 5rem;
-      padding: 0 1rem;
     }
 
     & > * {
