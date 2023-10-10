@@ -37,6 +37,10 @@
   padding: 8rem 0;
   color: #fff;
 
+  @media screen and (max-width: 576px) {
+    padding: 3rem 0;
+  }
+
   &__logo {
     display: flex;
     align-items: center;
@@ -46,17 +50,31 @@
       flex-direction: column;
     }
 
-    &-img {}
+    &-img {
+      @media screen and (max-width: 576px) {
+        width: 7rem;
+        height: 7rem;
+      }
+    }
   }
 
   &__name {
     font-size: 4rem;
     margin-left: 2rem;
+
+    @media screen and (max-width: 576px) {
+      font-size: 3rem;
+    }
   }
 
   &__copyright {
     padding-top: 8rem;
     font-size: 1.4rem;
+
+    @media screen and (max-width: 576px) {
+      padding: 3rem 0;
+      font-size: 1.2rem;
+    }
 
     p {
       border-top: $border-line;
@@ -67,6 +85,12 @@
   &__navigation {
     padding-top: 8rem;
     font-size: 1.6rem;
+
+
+    @media screen and (max-width: 576px) {
+      padding: 3rem 0;
+      font-size: 1.4rem;
+    }
 
     &__list {
       list-style: none;
