@@ -21,11 +21,20 @@
 .popular-travel {
   padding: 8rem 0;
 
+  @media screen and (max-width: 576px) {
+    padding: 3rem 0;
+  }
+
   &__title {
     text-transform: uppercase;
     font-size: 3rem;
     color: #fff;
     margin-bottom: 2rem;
+
+    @media screen and (max-width: 576px) {
+      font-size: 2.25rem;
+      margin-bottom: 1.5rem;
+    }
   }
 
   .card:hover {
