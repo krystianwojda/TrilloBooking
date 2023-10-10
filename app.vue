@@ -12,7 +12,7 @@ useHead({
 </script>
 
 <template>
-  <!--<the-header/>-->
+  <the-header/>
   <section class="hotel-view">
     <div class="gallery">
       <figure class="gallery__item">
@@ -49,10 +49,11 @@ useHead({
           <div class="row">
             <div class="col-12">
               <div class="description">
-                <p class="description__paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                <p class="description__paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
-                <p class="description__paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                <p class="description__paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
+                <div class="description__price">
+                  <div class="description__price-title">Actual price</div>
+                  <div class="description__price-count">$150 <span>per night</span></div>
+                </div>
+                <p class="description__paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
                 <ul class="description__list">
                   <li class="description__list-item">Close to the beach</li>
                   <li class="description__list-item">Breakfat included</li>
@@ -63,8 +64,9 @@ useHead({
                   <li class="description__list-item">Air conditiong and heating</li>
                   <li class="description__list-item">We speak all languages</li>
                 </ul>
-                <p class="description__paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
-                <p class="description__paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                <div class="description__cta">
+                  <button class="description__cta__button">book now</button>
+                </div>
               </div>
             </div>
           </div>
@@ -116,9 +118,6 @@ useHead({
           </div>
         </div>
       </div>
-    </div>
-    <div class="cta">
-      <button class="cta__button">book now</button>
     </div>
   </section>
   <the-footer/>
@@ -315,6 +314,65 @@ body {
       }
     }
 
+    &__price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      &-title {
+        font-size: 2rem;
+        font-weight: 600;
+
+        @media screen and (max-width: 576px) {
+          font-size: 1.75rem;
+        }
+      }
+      &-count {
+        font-size: 3.5rem;
+        color: $color-primary;
+        font-weight: 600;
+
+        @media screen and (max-width: 576px) {
+          font-size: 2.75rem;
+        }
+
+        span {
+          font-size: 1.75rem;
+          font-weight: 300;
+          margin-left: .25rem;
+
+          @media screen and (max-width: 576px) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    &__cta {
+      padding: 4rem 0;
+      display: flex;
+      justify-content: center;
+
+      &__button {
+        padding: 1.25rem 4rem;
+        font-size: 1.75rem;
+        color: #fff;
+        border: none;
+        font-weight: 300;
+        text-transform: uppercase;
+        border-radius: 100px;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        position: relative;
+        transition: all .7s;
+      }
+
+      &__button:hover {
+        background-image: linear-gradient(to right, #ff094f, #850237);
+        transform: scale(1.05);
+      }
+    }
+
     &__text {
       margin-bottom: 3.5rem;
     }
@@ -363,30 +421,6 @@ body {
     }
 
     &__btn:hover {
-      transform: scale(1.05);
-    }
-  }
-
-  .cta {
-    padding: 4rem 0;
-    display: flex;
-    justify-content: center;
-
-    &__button {
-      padding: 1.25rem 4rem;
-      font-size: 1.75rem;
-      color: #fff;
-      border: none;
-      font-weight: 300;
-      text-transform: uppercase;
-      border-radius: 100px;
-      background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-      position: relative;
-      transition: all .7s;
-    }
-
-    &__button:hover {
-      background-image: linear-gradient(to right, #ff094f, #850237);
       transform: scale(1.05);
     }
   }
