@@ -60,3 +60,11 @@
   }
 }
 </style>
+
+<script setup>
+const route = useRoute();
+
+useHead({
+  title: route.params.name
+});
+</script>

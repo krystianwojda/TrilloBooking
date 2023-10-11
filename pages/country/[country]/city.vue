@@ -22,3 +22,11 @@
   }
 }
 </style>
+
+<script setup>
+const route = useRoute();
+
+useHead({
+  title: `TrilloBooking in ${route.params.country}`
+});
+</script>
