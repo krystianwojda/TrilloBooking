@@ -3,7 +3,7 @@
   <div class="content">
     <the-sidebar/>
     <div class="container">
-      <travel-cards/>
+      <NuxtPage/>
     </div>
   </div>
 </template>
@@ -22,5 +22,3 @@
   }
 }
 </style>
-<script setup lang="ts">
-</script>
