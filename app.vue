@@ -12,21 +12,9 @@ useHead({
 </script>
 
 <template>
-  <the-header/>
-  <the-hero/>
-  <the-popular-travel/>
-  <the-footer/>
+  <NuxtPage/>
 </template>
 
 <style lang="scss">
 @import "scss/main";
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-body {
-  background-color: $color-primary;
-}
 </style>

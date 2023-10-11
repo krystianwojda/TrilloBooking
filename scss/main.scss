@@ -16,3 +16,12 @@ $color-shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 
 $border-line: 1px solid $color-grey-light-4;
 $border-line-light: 1px solid $color-grey-light-3;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $color-primary;
+}
