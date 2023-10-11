@@ -1,8 +1,8 @@
 <template>
-  <div class="header__business">
+  <NuxtLink class="header__business" to="/">
     <img class="header__logo" src="@/src/logo.png" alt="logo">
     <span class="header__name">TrilloBooking</span>
-  </div>
+  </NuxtLink>
 </template>
 
 <style lang="scss" scoped>
@@ -12,6 +12,7 @@
   &__business {
     display: flex;
     align-items: center;
+    text-decoration: none;
   }
 
   &__logo {
@@ -34,3 +35,5 @@
   }
 }
 </style>
+<script setup lang="ts">
+</script>
