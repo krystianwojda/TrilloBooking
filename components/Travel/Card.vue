@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+  <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
     <div class="card">
       <img class="card__image" src="https://welcometozante.com/wp-content/uploads/2020/11/Zante-citt%C3%A0-1.jpg" alt="">
       <div class="card__information">
@@ -33,6 +33,8 @@
   border: none;
   transition: all .7s;
   margin-bottom: 2rem;
+  max-width: 425px;
+  min-width: 300px;
 
   &__image {
     width: 100%;
