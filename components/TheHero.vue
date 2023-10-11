@@ -1,3 +1,9 @@
+<script setup>
+const handleSearch = () => {
+  navigateTo(`/country/all/city`)
+}
+</script>
+
 <template>
   <section class="hero">
     <div class="hero__text-box">
@@ -5,7 +11,7 @@
       <h1 class="hero__text-box__title">Choose your dream trip</h1>
       <span class="hero__text-box__objective">Greece, Croatia, Spain, Brazil</span>
       <div class="hero__button">
-        <button class="btn">Show offer</button>
+        <button class="btn" @click="handleSearch">Show offer</button>
       </div>
     </div>
   </section>
