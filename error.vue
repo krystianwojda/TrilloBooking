@@ -1,7 +1,7 @@
 <template>
   <div class="error">
-    <h1 class="error__status">404</h1>
-    <p class="error__information">Page not found.</p>
+    <h1 class="error__status">{{ error.statusCode }}</h1>
+    <p class="error__information">{{ error.message }}</p>
     <button class="error__button" @click="handleError">Go back</button>
   </div>
 </template>
@@ -61,6 +61,7 @@
 </style>
 
 <script setup>
+const error = useError();
 const handleError = () => {
   navigateTo('/');
 }
