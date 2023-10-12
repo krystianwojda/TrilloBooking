@@ -1,8 +1,26 @@
 <template>
   <div class="overview">
-    <h1 class="overview__title">hotel las palmas</h1>
-    <div class="overview__stars">
+    <h1 class="overview__title">{{ travel.name }}</h1>
+    <div class="overview__stars" v-if="props.travel.star === 5">
       <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+      <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+      <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+      <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+      <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+    </div>
+    <div class="overview__stars" v-if="props.travel.star === 4">
+      <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+      <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+      <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+      <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+    </div>
+    <div class="overview__stars" v-if="props.travel.star === 3">
+      <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+      <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+      <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+      <img class="overview__stars-icon" src="@/src/star.png" alt="star">
+    </div>
+    <div class="overview__stars" v-if="props.travel.star === 2">
       <img class="overview__stars-icon" src="@/src/star.png" alt="star">
       <img class="overview__stars-icon" src="@/src/star.png" alt="star">
       <img class="overview__stars-icon" src="@/src/star.png" alt="star">
@@ -10,7 +28,7 @@
     </div>
     <div class="overview__location">
       <img class="overview__location-icon" src="@/src/location.png" alt="Location">
-      <span class="overview__location-place">Greece, Zakyntos</span>
+      <span class="overview__location-place">{{ travel.country }}, {{ travel.city }}</span>
     </div>
     <div class="overview__rating">
       <div class="overview__rating-average">4.7</div>
@@ -18,6 +36,14 @@
     </div>
   </div>
 </template>
+
+<script setup>
+const props = defineProps({
+  travel: Object
+});
+
+console.log(props.travel.star)
+</script>
 
 <style lang="scss" scoped>
 @import "scss/main";

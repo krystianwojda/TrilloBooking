@@ -1,16 +1,22 @@
 <template>
   <div class="gallery">
     <figure class="gallery__item">
-      <img class="gallery__item-photo" src="@/src/hotel-1.jpg" alt="photo">
+      <img class="gallery__item-photo" :src="images[0]" alt="photo">
     </figure>
     <figure class="gallery__item">
-      <img class="gallery__item-photo" src="@/src/hotel-2.jpg" alt="photo">
+      <img class="gallery__item-photo" :src="images[1]" alt="photo">
     </figure>
     <figure class="gallery__item">
-      <img class="gallery__item-photo" src="@/src/hotel-3.jpg" alt="photo">
+      <img class="gallery__item-photo" :src="images[2]" alt="photo">
     </figure>
   </div>
 </template>
+
+<script setup>
+const props = defineProps({
+  images: Object
+});
+</script>
 
 <style lang="scss" scoped>
 @import "scss/main";
@@ -29,6 +35,7 @@
   &__item {
     &-photo {
       width: 100%;
+      min-height: 470px;
       display: block;
     }
   }

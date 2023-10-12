@@ -1,13 +1,13 @@
 <template>
   <section class="hotel-view">
     <the-header/>
-    <travel-detail-gallery/>
-    <travel-detail-overview/>
+    <travel-detail-gallery  :images="travel.images"/>
+    <travel-detail-overview :travel="travel"/>
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-xl-7">
           <div class="row">
-            <travel-detail-description/>
+            <travel-detail-description :travel="travel" :importants="travel.important"/>
           </div>
         </div>
         <div class="col-lg-12 col-xl-4">
@@ -62,9 +62,18 @@
 </style>
 
 <script setup>
+import travels from '@/data/travels.json';
+
 const route = useRoute();
+const data = travels;
 
 useHead({
   title: route.params.name
 });
+
+const travel = computed(() => {
+  return data.find((t) => {
+    return t.id === parseInt(route.params.id)
+  })
+})
 </script>
