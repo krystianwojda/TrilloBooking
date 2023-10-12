@@ -10,8 +10,11 @@
       <div class="filter" v-if="isOpen">
         <ul class="sidebar__filters">
           <li class="sidebar__filters__item">
-            <label class="sidebar__filters__item-label" for="country">Country</label>
-            <input class="sidebar__filters__item-input" type="text" id="country" placeholder="Greece">
+            <div class="sidebar__filters__item__box">
+              <label @click="updateModal('country')" class="sidebar__filters__item-label" for="country">Country</label>
+              <span class="sidebar__filters__item__box-value">{{ route.params.country }}</span>
+            </div>
+            <input class="sidebar__filters__item-input" type="text" id="country" placeholder="Greece" v-model="country">
           </li>
           <li class="sidebar__filters__item">
             <label class="sidebar__filters__item-label" for="city">City</label>
@@ -24,7 +27,7 @@
           </li>
         </ul>
         <div class="sidebar__check">
-          <button class="sidebar__check-button">Apply</button>
+          <button @click="onChangeCountry" class="sidebar__check-button">Apply</button>
         </div>
       </div>
     </nav>
@@ -34,6 +37,7 @@
     </div>
   </section>
 </template>
+
 
 <style lang="scss" scoped>
 @import "scss/main";
@@ -96,6 +100,12 @@
       justify-content: space-between;
       font-size: 1.75rem;
       margin-bottom: 1rem;
+
+      &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
       &-label {
         margin: .5rem 0;
@@ -160,10 +170,31 @@
   }
 }
 </style>
-<script setup lang="ts">
+<script setup>
 const isOpen = ref(true);
 
 const showMenu = () => {
   isOpen.value = !isOpen.value;
 }
+
+const modal = ref({
+  country: false,
+  city: false,
+  price: false,
+
+});
+
+const country = ref('');
+const route = useRoute();
+
+const updateModal = key => {
+  modal.value[key] = !modal.value[key];
+}
+
+const onChangeCountry = () => {
+  if (!country.value) return;
+  updateModal('country');
+  navigateTo(`/country/${country.value}/city/`);
+  country.value = '';
+};
 </script>

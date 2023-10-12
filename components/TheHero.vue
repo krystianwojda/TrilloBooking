@@ -1,6 +1,6 @@
 <script setup>
 const handleSearch = () => {
-  navigateTo(`/country/all/city`)
+  navigateTo(`/country/All/city`)
 }
 </script>
 
