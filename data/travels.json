@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "name": "Hotel Las Palmas",
+    "country": "Spain",
+    "city": "Gran Canaria",
+    "star": 5,
+    "price": 150,
+    "addCategory": "popular",
+    "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "important": ["Close to the beach", "Free airport transport", "Pets allowed", "Air conditiong and heating", "Breakfat included", "Wi-fi in rooms", "Free drinks", "We speak all languages"],
+    "images": [
+      "https://bestway2india.s3.amazonaws.com/media/gallery/WmVDNkRvVHZRbTN0bVlYbVlEWURNZz09/resize/1500x900/1523022219_6339facade-mountlavinia-hotel.webp",
+      "https://pomegranate-travel.com/wp-content/uploads/2017/03/main_The-Scots-Hotel-1500x900.jpg",
+      "https://pomegranate-travel.com/wp-content/uploads/2017/03/main_Agamim-2-1500x900.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Hotel Ostria Beach Resort",
+    "country": "Greece",
+    "city": "Kreta",
+    "star": 5,
+    "price": 189,
+    "addCategory": "popular",
+    "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "important": ["Close to the beach", "Free airport transport", "Pets allowed", "Air conditiong and heating", "Breakfat included", "Wi-fi in rooms", "Free drinks", "We speak all languages"],
+    "images": [
+      "https://bestway2india.s3.amazonaws.com/media/gallery/UmlmRkQ5UEtUNm16dlQ5Qy93enMrZz09/resize/1500x900/1524121311_140facade-radisson-blu-plaza-hotel-mysore.webp",
+      "https://www.mynameisrachel.org/portfolio-sample-trillo/img/hotel-3.jpg",
+      "https://images.squarespace-cdn.com/content/v1/55f6aa18e4b0f6a6215e8e79/1442316184793-6LJ0XJWD90HOKBBP2XHP/5.jpg?format=1500w"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Hotel Seeleiten Caldaro",
+    "country": "Italy",
+    "city": "Caldaro",
+    "star": 4,
+    "price": 130,
+    "addCategory": "",
+    "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "important": ["Close to the beach", "Free airport transport", "Pets allowed", "Air conditiong and heating", "Breakfat included", "Wi-fi in rooms", "Free drinks", "We speak all languages"],
+    "images": [
+      "https://images.squarespace-cdn.com/content/v1/57bc67529f7456ac2435b64d/1631718428821-VT1TVM2MMKB91DA1VVSC/ott-nol-tour-2020-web.jpg?format=1500w",
+      "https://www.wildernesstravel.com/wp-content/uploads/2023/08/10-alpenhotel-rainell-exterior-pool.jpg",
+      "https://www.hotelmanagement.com.au/wp-content/uploads/2023/01/the-langham-huntington.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Pine Cliffs Hotel",
+    "country": "Portugal",
+    "city": "Algarve",
+    "star": 5,
+    "price": 230,
+    "addCategory": "popular",
+    "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "important": ["Close to the beach", "Free airport transport", "Pets allowed", "Air conditiong and heating", "Breakfat included", "Wi-fi in rooms", "Free drinks", "We speak all languages"],
+    "images": [
+      "https://beverlyhillscourier.com/wp-content/uploads/2023/05/chevalrenderweb.jpg",
+      "https://www.fvw.de/news/media/23/MSC-Explora-Indoor-Pool-220362.jpeg",
+      "https://cdn.shopify.com/s/files/1/0127/0090/9632/files/27_1.png?v=1670931535"
+    ]
+  }
+]
