@@ -14,7 +14,10 @@
               <label @click="updateModal('country')" class="sidebar__filters__item-label" for="country">Country</label>
               <span class="sidebar__filters__item__box-value">{{ route.params.country }}</span>
             </div>
-            <input class="sidebar__filters__item-input" type="text" id="country" placeholder="Greece" v-model="country">
+            <select class="sidebar__filters__item-input" id="country" placeholder="Greece" v-model="country">
+              <option value="All">All</option>
+              <option v-for="countryValue in filterCountry" :value="countryValue">{{ countryValue }}</option>
+            </select>
           </li>
           <li class="sidebar__filters__item">
             <label class="sidebar__filters__item-label" for="city">City</label>
@@ -171,6 +174,10 @@
 }
 </style>
 <script setup>
+import travels from '@/data/travels.json';
+
+const filterCountry = travels.map(c => c.country);
+
 const isOpen = ref(true);
 
 const showMenu = () => {
