@@ -76,4 +76,11 @@ const travel = computed(() => {
     return t.id === parseInt(route.params.id)
   })
 })
+
+if (!travel.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: `Car witch ID ${route.params.id} does not exist`
+  });
+}
 </script>
