@@ -5,15 +5,22 @@
         <div class="col-12">
           <h3 class="popular-travel__title">the best offers</h3>
           <div class="row">
-            <travel-card/>
-            <travel-card/>
-            <travel-card/>
+            <travel-card v-for="travel in sortedTravel" :key="travel.id" :travel="travel"/>
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+import travels from '@/data/travels.json';
+
+const data = travels;
+const sortedTravel = data.filter((item) => {
+  return item.addCategory === 'popular';
+})
+</script>
 
 <style lang="scss" scoped>
 @import "@/scss/main";

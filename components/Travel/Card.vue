@@ -1,26 +1,32 @@
 <template>
   <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
     <div class="card">
-      <img class="card__image" src="https://welcometozante.com/wp-content/uploads/2020/11/Zante-citt%C3%A0-1.jpg" alt="">
+      <img class="card__image" :src="travel.images[0]" alt="">
       <div class="card__information">
         <div class="card__information__title">
-          <span class="card__information__title-place">Hotel Las Palmas</span>
+          <span class="card__information__title-place">{{ travel.name }}</span>
           <div class="card__information__title__description">
-            <span class="card__information__title__description-country">Greece,</span>
-            <span class="card__information__title__description-city">Zakyntos</span>
+            <span class="card__information__title__description-country">{{ travel.country }},</span>
+            <span class="card__information__title__description-city">{{ travel.city }}</span>
           </div>
         </div>
-        <div class="card__information__price">$150</div>
+        <div class="card__information__price">${{ travel.price }}</div>
       </div>
       <div class="card__description">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+        <p>{{ travel.shortDescription }}</p>
       </div>
       <div class="card__button">
-        <button class="card__btn">show detail</button>
+        <button class="card__btn" @click="navigateTo(`/city/${travel.name}-${travel.id}`)">show detail</button>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+const props = defineProps({
+  travel: Object
+});
+</script>
 
 <style lang="scss" scoped>
 @import "@/scss/main";
@@ -114,5 +120,3 @@
   transform: scale(1.02);
 }
 </style>
-<script setup lang="ts">
-</script>
