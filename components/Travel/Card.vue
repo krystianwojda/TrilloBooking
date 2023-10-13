@@ -60,7 +60,7 @@ const props = defineProps({
 
       &-place {
         text-transform: uppercase;
-        font-size: 2rem;
+        font-size: 1.75rem;
         font-weight: 600;
       }
 
@@ -68,12 +68,12 @@ const props = defineProps({
         font-weight: 500;
 
         &-country {
-          font-size: 1.6rem;
+          font-size: 1.25rem;
           margin-right: .5rem;
         }
 
         &-city {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
         }
       }
     }
