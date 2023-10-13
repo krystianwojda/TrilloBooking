@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card__box">
         <img class="card__box-image" :src="travel.images[0]" alt="">
-        <img class="card__box-favorite" :src="favored ? heartFilled : heartOutline" alt="icon-heart" @click="favored = !favored">
+        <img class="card__box-favorite" :src="favored ? heartFilled : heartOutline" alt="icon-heart" @click="emit('favorItem', travel.id)">
       </div>
       <div class="card__information">
         <div class="card__information__title">
@@ -30,12 +30,11 @@ import heartFilled from '/src/heartFilled.png';
 import heartOutline from '/src/heartOutline.png';
 
 const props = defineProps({
-  travel: Object
+  travel: Object,
+  favored: Boolean
 });
 
-const favored = useState(`favored-${props.travel.id}`, () => {
-  return false;
-})
+const emit = defineEmits(['favorItem']);
 </script>
 
 <style lang="scss" scoped>

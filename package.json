@@ -12,5 +12,8 @@
     "@nuxt/devtools": "latest",
     "nuxt": "^3.7.3",
     "sass": "^1.68.0"
+  },
+  "dependencies": {
+    "@vueuse/nuxt": "^10.5.0"
   }
 }

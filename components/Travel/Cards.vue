@@ -1,7 +1,7 @@
 <template>
   <div class="cards">
     <div class="row">
-      <travel-card v-for="travel in data" :key="travel.id" :travel="travel"/>
+      <travel-card v-for="travel in data" :key="travel.id" :travel="travel" @favorItem="handleFavorite" :favored="travel.id in favorite"/>
     </div>
   </div>
 </template>
@@ -21,4 +21,15 @@
 import travels from '@/data/travels.json';
 
 const data = travels;
+const favorite = useLocalStorage("favorite", {});
+const handleFavorite = (id) => {
+  if (id in favorite.value) {
+    delete favorite.value[id];
+  } else {
+    favorite.value = {
+      ...favorite.value,
+      [id]: true
+    }
+  }
+}
 </script>
