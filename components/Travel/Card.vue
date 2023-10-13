@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card__box">
         <img class="card__box-image" :src="travel.images[0]" alt="">
-        <img class="card__box-favorite" :src="favored ? heartFilled : heartOutline" alt="icon-heart" @click="emit('favorItem', travel.id)">
+        <img v-if="route.params.country" class="card__box-favorite" :src="favored ? heartFilled : heartOutline" alt="icon-heart" @click="emit('favorItem', travel.id)">
       </div>
       <div class="card__information">
         <div class="card__information__title">
@@ -33,6 +33,8 @@ const props = defineProps({
   travel: Object,
   favored: Boolean
 });
+
+const route = useRoute();
 
 const emit = defineEmits(['favorItem']);
 </script>

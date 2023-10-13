@@ -5,7 +5,7 @@
         <div class="col-12">
           <h3 class="popular-travel__title">the best offers</h3>
           <div class="row">
-            <travel-card v-for="travel in sortedTravel" :key="travel.id" :travel="travel" @favorItem="handleFavorite" :favored="travel.id in favorite"/>
+            <travel-card v-for="travel in sortedTravel" :key="travel.id" :travel="travel"/>
           </div>
         </div>
       </div>
@@ -20,18 +20,6 @@ const data = travels;
 const sortedTravel = data.filter((item) => {
   return item.addCategory === 'popular';
 })
-
-const favorite = useLocalStorage("favorite", {});
-const handleFavorite = (id) => {
-  if (id in favorite.value) {
-    delete favorite.value[id];
-  } else {
-    favorite.value = {
-      ...favorite.value,
-      [id]: true
-    }
-  }
-}
 </script>
 
 <style lang="scss" scoped>
