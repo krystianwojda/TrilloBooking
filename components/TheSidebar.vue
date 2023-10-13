@@ -21,12 +21,12 @@
           </li>
           <li class="sidebar__filters__item">
             <div class="sidebar__filters__item__box">
-              <label class="sidebar__filters__item-label" for="city">City</label>
-              <span class="sidebar__filters__item__box-value">{{ route.params.city || 'all' }}</span>
+              <label @click="updateModal('city')" class="sidebar__filters__item-label" for="city">City</label>
+              <span class="sidebar__filters__item__box-value">{{ route.params.name }}</span>
             </div>
-            <select class="sidebar__filters__item-input" id="city" placeholder="Greece" v-model="city">
+            <select class="sidebar__filters__item-input" id="city" placeholder="Zakyntos" v-model="city">
               <option value="All">All</option>
-              <option>Zakyntos</option>
+              <option v-for="cityValue in filterCity" :value="cityValue">{{ cityValue }}</option>
             </select>
           </li>
           <li class="sidebar__filters__item">
@@ -183,6 +183,7 @@
 import travels from '@/data/travels.json';
 
 const filterCountry = travels.map(c => c.country);
+const filterCity = travels.map(c => c.city);
 
 const isOpen = ref(true);
 
@@ -198,6 +199,7 @@ const modal = ref({
 });
 
 const country = ref('');
+const city = ref('');
 const route = useRoute();
 
 const updateModal = key => {
@@ -207,7 +209,7 @@ const updateModal = key => {
 const onChangeCountry = () => {
   if (!country.value) return;
   updateModal('country');
-  navigateTo(`/country/${country.value}/city/`);
-  country.value = '';
+  updateModal('city');
+  navigateTo(`/country/${country.value}/city/${city.value}`);
 };
 </script>
