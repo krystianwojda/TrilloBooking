@@ -20,8 +20,14 @@
             </select>
           </li>
           <li class="sidebar__filters__item">
-            <label class="sidebar__filters__item-label" for="city">City</label>
-            <input class="sidebar__filters__item-input" text="text" id="city" placeholder="Zakyntos">
+            <div class="sidebar__filters__item__box">
+              <label class="sidebar__filters__item-label" for="city">City</label>
+              <span class="sidebar__filters__item__box-value">{{ route.params.city || 'all' }}</span>
+            </div>
+            <select class="sidebar__filters__item-input" id="city" placeholder="Greece" v-model="city">
+              <option value="All">All</option>
+              <option>Zakyntos</option>
+            </select>
           </li>
           <li class="sidebar__filters__item">
             <label class="sidebar__filters__item-label">Price</label>
