@@ -1,7 +1,10 @@
 <template>
   <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
     <div class="card">
-      <img class="card__image" :src="travel.images[0]" alt="">
+      <div class="card__box">
+        <img class="card__box-image" :src="travel.images[0]" alt="">
+        <img class="card__box-favorite" :src="favored ? heartFilled : heartOutline" alt="icon-heart" @click="favored = !favored">
+      </div>
       <div class="card__information">
         <div class="card__information__title">
           <span class="card__information__title-place">{{ travel.name }}</span>
@@ -23,9 +26,16 @@
 </template>
 
 <script setup>
+import heartFilled from '/src/heartFilled.png';
+import heartOutline from '/src/heartOutline.png';
+
 const props = defineProps({
   travel: Object
 });
+
+const favored = useState(`favored-${props.travel.id}`, () => {
+  return false;
+})
 </script>
 
 <style lang="scss" scoped>
@@ -42,10 +52,22 @@ const props = defineProps({
   max-width: 425px;
   min-width: 300px;
 
-  &__image {
-    width: 100%;
-    height: 25rem;
-    border-radius: 13px 13px 0 0;
+  &__box {
+    display: flex;
+
+    &-image {
+      width: 100%;
+      height: 25rem;
+      border-radius: 13px 13px 0 0;
+    }
+
+    &-favorite {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      width: 3rem;
+      height: 3rem;
+    }
   }
 
   &__information {
