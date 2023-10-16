@@ -29,11 +29,6 @@
               <option v-for="cityValue in filterCity" :value="cityValue">{{ cityValue }}</option>
             </select>
           </li>
-          <li class="sidebar__filters__item">
-            <label class="sidebar__filters__item-label">Price</label>
-            <input class="sidebar__filters__item-input" type="number" placeholder="Min">
-            <input class="sidebar__filters__item-input" type="number" placeholder="Max">
-          </li>
         </ul>
         <div class="sidebar__check">
           <button @click="onChangeCountry" class="sidebar__check-button">Apply</button>
@@ -101,7 +96,7 @@
   &__filters {
     padding: 0 3rem;
     display: block;
-    height: 30rem;
+    height: 17rem;
 
     &__item {
       display: flex;
