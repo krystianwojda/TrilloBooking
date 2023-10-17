@@ -21,13 +21,13 @@ const data = travel;
 </script>
 
 <style lang="scss" scoped>
-@import "~/scss/main";
+@import "@/scss/main";
 
 .title {
   color: white;
   padding-top: 10rem;
   text-align: right;
-  font-size: 3rem;
+  font-size: 4rem;
 
   @media screen and (max-width: 562px) {
     padding-top: 7rem;
