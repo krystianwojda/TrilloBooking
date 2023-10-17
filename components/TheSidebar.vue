@@ -14,7 +14,7 @@
               <label @click="updateModal('country')" class="sidebar__filters__item-label" for="country">Country</label>
               <span class="sidebar__filters__item__box-value">{{ route.params.country }}</span>
             </div>
-            <select class="sidebar__filters__item-input" id="country" placeholder="Greece" v-model="country">
+            <select class="sidebar__filters__item-input" id="country" v-model="country">
               <option value="All">All</option>
               <option v-for="countryValue in filterCountry" :value="countryValue">{{ countryValue }}</option>
             </select>
@@ -24,7 +24,7 @@
               <label @click="updateModal('city')" class="sidebar__filters__item-label" for="city">City</label>
               <span class="sidebar__filters__item__box-value">{{ route.params.name }}</span>
             </div>
-            <select class="sidebar__filters__item-input" id="city" placeholder="Zakyntos" v-model="city">
+            <select class="sidebar__filters__item-input" id="city" v-model="city">
               <option value="All">All</option>
               <option v-for="cityValue in filterCity" :value="cityValue">{{ cityValue }}</option>
             </select>

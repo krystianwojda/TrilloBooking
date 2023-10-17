@@ -1,10 +1,7 @@
 <template>
   <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
     <div class="card">
-      <div class="card__box">
-        <img class="card__box-image" :src="travel.images[0]" alt="">
-        <img v-if="route.params.country" class="card__box-favorite" :src="favored ? heartFilled : heartOutline" alt="icon-heart" @click="emit('favorItem', travel.id)">
-      </div>
+        <img class="card-image" :src="travel.images[0]" alt="">
       <div class="card__information">
         <div class="card__information__title">
           <span class="card__information__title-place">{{ travel.name }}</span>
@@ -19,24 +16,17 @@
         <p>{{ travel.shortDescription }}</p>
       </div>
       <div class="card__button">
-        <button class="card__btn" @click="navigateTo(`/city/${travel.name}-${travel.id}`)">show detail</button>
+        <button class="card__button-view">View</button>
+        <button class="card__button-delete">Delete</button>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import heartFilled from '/src/heartFilled.png';
-import heartOutline from '/src/heartOutline.png';
-
 const props = defineProps({
-  travel: Object,
-  favored: Boolean
-});
-
-const route = useRoute();
-
-const emit = defineEmits(['favorItem']);
+  travel: Object
+})
 </script>
 
 <style lang="scss" scoped>
@@ -50,24 +40,14 @@ const emit = defineEmits(['favorItem']);
   border: none;
   transition: all .7s;
   margin-bottom: 2rem;
+  max-width: 425px;
   min-width: 300px;
 
-  &__box {
-    display: flex;
 
-    &-image {
-      width: 100%;
-      height: 25rem;
-      border-radius: 13px 13px 0 0;
-    }
-
-    &-favorite {
-      position: absolute;
-      right: 1rem;
-      top: 1rem;
-      width: 3rem;
-      height: 3rem;
-    }
+  &-image {
+    width: 100%;
+    height: 25rem;
+    border-radius: 13px 13px 0 0;
   }
 
   &__information {
@@ -117,7 +97,8 @@ const emit = defineEmits(['favorItem']);
     justify-content: center;
     margin-bottom: 2rem;
 
-    button {
+    &-view {
+      margin-right: 2rem;
       padding: .7rem 3rem;
       font-size: 1.5rem;
       color: #fff;
@@ -125,20 +106,36 @@ const emit = defineEmits(['favorItem']);
       font-weight: 300;
       text-transform: uppercase;
       border-radius: 100px;
-      background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+      background-color: #0d6efd;
       position: relative;
       transition: all .7s;
     }
 
-    button:hover {
-      background-image: linear-gradient(to right, #ff094f, #850237);
+    &-view:hover {
+      background-color: #0853c2;
+      transform: scale(1.05);
+      box-shadow: $color-shadow-light;
+    }
+
+    &-delete {
+      margin-left: 2rem;
+      padding: .7rem 3rem;
+      font-size: 1.5rem;
+      color: #fff;
+      border: none;
+      font-weight: 300;
+      text-transform: uppercase;
+      border-radius: 100px;
+      background-color: #dc3545;
+      position: relative;
+      transition: all .7s;
+    }
+
+    &-delete:hover {
+      background-color: #b51b2a;
       transform: scale(1.05);
       box-shadow: $color-shadow-light;
     }
   }
-}
-
-.card:hover {
-  transform: scale(1.02);
 }
 </style>
