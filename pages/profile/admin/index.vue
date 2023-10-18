@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1 class="title">Admin Pages</h1>
+        <h1 class="title">Admin Page</h1>
         <div class="cards">
           <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
@@ -46,6 +46,21 @@
                 <div class="card__button">
                   <NuxtLink to="/profile/admin/travels">
                     <button>All users</button>
+                  </NuxtLink>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+              <div class="card">
+                <div class="card__img">
+                  <img src="@/src/order.png" alt="orders">
+                </div>
+                <div class="card__description">
+                  <p>View all purchased travels</p>
+                </div>
+                <div class="card__button">
+                  <NuxtLink to="/profile/admin/orders">
+                    <button>All orders</button>
                   </NuxtLink>
                 </div>
               </div>
