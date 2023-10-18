@@ -16,7 +16,9 @@
         <p>{{ travel.shortDescription }}</p>
       </div>
       <div class="card__button">
-        <button class="card__button-view">View</button>
+        <NuxtLink :to="`/city/${travel.name}-${travel.id}`">
+          <button class="card__button-view">View</button>
+        </NuxtLink>
         <button class="card__button-delete">Delete</button>
       </div>
     </div>
