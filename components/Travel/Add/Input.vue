@@ -1,12 +1,8 @@
 <template>
   <div class="col-12 col-md-6 col-lg-6 col-xl-6">
     <div class="box-input">
-      <label class="input-label" :for="name">{{ title }}</label>
-      <select class="input-select" :name="name" :placeholder="title" v-model="state">
-        <option v-for="option in options" :key="option.id" :value="option">
-          {{ option }}
-        </option>
-      </select>
+      <label class="input-label" for="">{{ title }}</label>
+      <input type="text" class="input-text" :placeholder="placeholder" v-model="state" :name="name" @input="onChange">
     </div>
   </div>
 </template>
@@ -15,13 +11,12 @@
 const props = defineProps({
   title: String,
   name: String,
-  options: Array
-});
+  placeholder: String
+})
 const emits = defineEmits(['changeInput']);
 const state = ref('');
-
 const onChange = () => {
-  emits('changeInput', state.value, props.name)
+  emits('changeInput', state.value, props.name);
 };
 </script>
 
@@ -31,13 +26,14 @@ const onChange = () => {
 .box-input {
   display: flex;
   flex-direction: column;
+  padding: 1rem 0;
 
   .input-label {
     font-size: 2rem;
     padding-bottom: .5rem;
   }
 
-  .input-select {
+  .input-text {
     padding: .75rem;
     font-size: 1.5rem;
     border-radius: 15px;
