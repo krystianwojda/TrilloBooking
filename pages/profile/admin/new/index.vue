@@ -12,6 +12,7 @@
             <travel-add-select v-for="select in inputsSelect" :title="select.title" :options="select.options" :name="select.name" @change-input="onChangeInput"/>
             <travel-add-textarea v-for="textarea in inputsTextArea" :title="textarea.title" :name="textarea.name" :placeholder="textarea.placeholder" :maxLength="textarea.maxLength" @change-input="onChangeInput"/>
             <travel-add-number v-for="input in inputsNumber" :key="input.id" :title="input.title" :name="input.name" :placeholder="input.placeholder" @change-input="onChangeInput"/>
+            <travel-add-image @change-input="onChangeInput"/>
           </div>
         </div>
       </div>
