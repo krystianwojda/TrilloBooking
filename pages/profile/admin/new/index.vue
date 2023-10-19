@@ -105,13 +105,23 @@ const onChangeInput = (data, name) => {
   margin-top: 10rem;
   font-size: 4rem;
   color: white;
+
+  @media screen and (max-width: 576px) {
+    text-align: center;
+    margin-top: 8rem;
+    font-size: 3rem;
+  }
 }
 
 .box {
-  margin-top: 3rem;
+  margin: 3rem 0;
   background-color: white;
   border-radius: 15px;
   box-shadow: $color-shadow-dark;
   padding: 3rem;
+
+  @media screen and (max-width: 576px) {
+    padding: 0;
+  }
 }
 </style>
