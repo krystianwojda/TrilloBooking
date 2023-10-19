@@ -31,6 +31,7 @@ const onChange = () => {
 .box-input {
   display: flex;
   flex-direction: column;
+  padding: 1rem 2rem;
 
   .input-label {
     font-size: 2rem;
@@ -41,7 +42,6 @@ const onChange = () => {
     padding: .75rem;
     font-size: 1.5rem;
     border-radius: 15px;
-    max-width: 400px;
     border: $border-line;
     box-shadow: $color-shadow-light;
   }

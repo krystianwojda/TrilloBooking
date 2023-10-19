@@ -2,7 +2,7 @@
   <div class="col-12 col-md-6 col-lg-6 col-xl-6">
     <div class="box-input">
       <label class="input-label" :for="name">{{ title }}</label>
-      <input type="text" class="input-text" :placeholder="placeholder" v-model="state" :name="name" @input="onChange">
+      <textarea class="input-textarea" :maxlength="maxLength" :placeholder="placeholder" v-model="state" :name="name" @input="onChange"></textarea>
     </div>
   </div>
 </template>
@@ -11,7 +11,8 @@
 const props = defineProps({
   title: String,
   name: String,
-  placeholder: String
+  placeholder: String,
+  maxLength: Number
 })
 const emits = defineEmits(['changeInput']);
 const state = ref('');
@@ -33,7 +34,8 @@ const onChange = () => {
     padding-bottom: .5rem;
   }
 
-  .input-text {
+  .input-textarea {
+    min-height: 20rem;
     padding: .75rem;
     font-size: 1.5rem;
     border-radius: 15px;

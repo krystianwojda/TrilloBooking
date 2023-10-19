@@ -10,6 +10,7 @@
           <div class="row">
             <travel-add-input v-for="input in inputsText" :key="input.id" :title="input.title" :name="input.name" :placeholder="input.placeholder"  @change-input="onChangeInput"/>
             <travel-add-select v-for="select in inputsSelect" :title="select.title" :options="select.options" :name="select.name" @change-input="onChangeInput"/>
+            <travel-add-textarea v-for="textarea in inputsTextArea" :title="textarea.title" :name="textarea.name" :placeholder="textarea.placeholder" :maxLength="textarea.maxLength" @change-input="onChangeInput"/>
           </div>
         </div>
       </div>
@@ -27,9 +28,9 @@ const info = useState('adInfo', () => {
     city: '', /* zrobione */
     star: '', /* zrobione */
     price: '',
-    addCategory: '',
-    shortDescription: '',
-    description: '',
+    addCategory: '', /* zrobione */
+    shortDescription: '', /* zrobione */
+    description: '', /* zrobione */
     important: '',  /* zrobione */
     images: null
   };
@@ -73,7 +74,23 @@ const inputsSelect = [
     name: 'addCategory',
     options: category
   }
-]
+];
+const inputsTextArea = [
+  {
+    id: 7,
+    title: 'Short description (max length: 250)',
+    name: 'shortDescription',
+    placeholder: 'Some short description on card',
+    maxLength: 250
+  },
+  {
+    id: 8,
+    title: 'Description',
+    name: 'description',
+    placeholder: 'Full description to the detail page',
+    maxLength: 99999
+  }
+];
 
 const onChangeInput = (data, name) => {
   info.value[name] = data;
