@@ -15,7 +15,9 @@
                   <p>Add a new trip</p>
                 </div>
                 <div class="card__button">
-                  <button>Add new product</button>
+                  <NuxtLink to="/profile/admin/new">
+                    <button>add new travel</button>
+                  </NuxtLink>
                 </div>
               </div>
             </div>
