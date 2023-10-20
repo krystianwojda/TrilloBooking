@@ -7,20 +7,20 @@
           <div class="content">
             <h2 class="content__title">Login</h2>
             <div class="content__box-input">
-              <label class="content__box-input__label" for="login">Username</label>
-              <input class="content__box-input__input" id="login" type="text"/>
+              <label class="content__box-input__label" for="e-mail">E-mail</label>
+              <input class="content__box-input__input" id="e-mail" type="text" v-model="email"/>
             </div>
             <div class="content__box-input">
               <label class="content__box-input__label" for="password">Password</label>
-              <input class="content__box-input__input" id="password" type="password"/>
+              <input class="content__box-input__input" id="password" type="password" v-model="password"/>
             </div>
             <div class="content__box-input">
-              <button class="btn">Login</button>
+              <button class="btn" @click="login">Login</button>
             </div>
             <div class="content__box-authenticated">
               <span class="content__box-authenticated__title">Or Sing Up Using</span>
               <div class="content__box-authenticated__alternative">
-                <button @click="login" class="content__box-authenticated__alternative__btn">
+                <button @click="loginGoogle" class="content__box-authenticated__alternative__btn">
                   <img class="img" src="@/src/google-icon.png" alt="Google icon"/>Google
                 </button>
                 <button class="content__box-authenticated__alternative__btn">
@@ -38,7 +38,20 @@
 <script setup>
 const supabase = useSupabaseClient();
 
+const email = ref('');
+const password = ref('');
+
 const login = async () => {
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email: email.value,
+    password: password.value
+  });
+
+  if (error) {
+    console.log(error)
+  }
+};
+const loginGoogle = async () => {
   const { error } = supabase.auth.signInWithOAuth({
     provider: 'google'
   });
