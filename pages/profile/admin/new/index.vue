@@ -21,6 +21,10 @@
 </template>
 
 <script setup>
+definePageMeta({
+  middleware: ['auth']
+});
+
 const stars = [1, 2, 3, 4, 5];
 const category = ['popular', 'normal']
 const info = useState('adInfo', () => {

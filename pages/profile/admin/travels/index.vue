@@ -17,6 +17,10 @@
 <script setup>
 import travel from '~/data/travels.json';
 
+definePageMeta({
+  middleware: ['auth']
+});
+
 const data = travel;
 </script>
 
