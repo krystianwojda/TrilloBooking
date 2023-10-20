@@ -1,12 +1,16 @@
 <template>
   <nav class="header__user-nav">
     <div class="header__user-nav__item">
-      <span class="header__user-nav__item-title">Login</span>
-      <img class="header__user-nav__item-icon" src="@/src/login.png" alt="Login">
+      <NuxtLink class="header__user-nav__item__link" to="/login">
+        <span class="header__user-nav__item__link-title">Login</span>
+        <img class="header__user-nav__item__link-icon" src="@/src/login.png" alt="Login">
+      </NuxtLink>
     </div>
     <div class="header__user-nav__item">
-      <span class="header__user-nav__item-title">Registration</span>
-      <img class="header__user-nav__item-icon" src="@/src/new-user.png" alt="Register">
+      <NuxtLink class="header__user-nav__item__link" to="/register">
+        <span class="header__user-nav__item__link-title">Registration</span>
+        <img class="header__user-nav__item__link-icon" src="@/src/new-user.png" alt="Register">
+      </NuxtLink>
     </div>
   </nav>
 </template>
@@ -45,26 +49,33 @@
     }
 
     &__item {
-      &-title {
-        font-size: 2rem;
-        margin-right: 1rem;
+      &__link {
+        text-decoration: none;
+        color: $color-grey-dark-2;
 
-        @media screen and (max-width: 576px) {
-          font-size: 1.5rem;
-          margin-right: .25rem;
+        &-title {
+          font-size: 2rem;
+          margin-right: 1rem;
+
+          @media screen and (max-width: 576px) {
+            font-size: 1.5rem;
+            margin-right: .25rem;
+          }
         }
-      }
 
-      &-icon {
-        width: 3rem;
-        height: 3rem;
+        &-icon {
+          width: 3rem;
+          height: 3rem;
 
-        @media screen and (max-width: 576px) {
-          width: 2.25rem;
-          height: 2.25rem;
+          @media screen and (max-width: 576px) {
+            width: 2.25rem;
+            height: 2.25rem;
+          }
         }
       }
     }
   }
 }
 </style>
+<script setup lang="ts">
+</script>
