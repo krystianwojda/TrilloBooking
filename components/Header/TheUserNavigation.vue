@@ -50,6 +50,8 @@
 
     &__item {
       &__link {
+        display: flex;
+        align-items: center;
         text-decoration: none;
         color: $color-grey-dark-2;
 
