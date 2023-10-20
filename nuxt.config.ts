@@ -3,5 +3,8 @@ export default defineNuxtConfig({
   modules: [
       '@vueuse/nuxt',
       '@nuxtjs/supabase'
-  ]
+  ],
+  supabase: {
+      redirect: false
+  }
 })
