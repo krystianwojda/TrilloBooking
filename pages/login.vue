@@ -50,6 +50,8 @@ const login = async () => {
   if (error) {
     console.log(error)
   }
+
+  navigateTo('/');
 };
 const loginGoogle = async () => {
   const { error } = supabase.auth.signInWithOAuth({
@@ -60,7 +62,7 @@ const loginGoogle = async () => {
     console.log(error);
   }
 
-  navigateTo('/')
+  navigateTo('/');
 };
 </script>
 

@@ -1,19 +1,44 @@
 <template>
   <nav class="header__user-nav">
-    <div class="header__user-nav__item">
-      <NuxtLink class="header__user-nav__item__link" to="/login">
-        <span class="header__user-nav__item__link-title">Login</span>
-        <img class="header__user-nav__item__link-icon" src="@/src/login.png" alt="Login">
-      </NuxtLink>
-    </div>
-    <div class="header__user-nav__item">
-      <NuxtLink class="header__user-nav__item__link" to="/register">
-        <span class="header__user-nav__item__link-title">Registration</span>
-        <img class="header__user-nav__item__link-icon" src="@/src/new-user.png" alt="Register">
-      </NuxtLink>
-    </div>
+    <ClientOnly>
+      <div class="header__user-nav__item" v-if="!user">
+        <NuxtLink class="header__user-nav__item__link" to="/login">
+          <span class="header__user-nav__item__link-title">Login</span>
+          <img class="header__user-nav__item__link-icon" src="@/src/login.png" alt="Login">
+        </NuxtLink>
+      </div>
+    </ClientOnly>
+    <ClientOnly>
+      <div class="header__user-nav__item" v-if="!user">
+        <NuxtLink class="header__user-nav__item__link" to="/register">
+          <span class="header__user-nav__item__link-title">Registration</span>
+          <img class="header__user-nav__item__link-icon" src="@/src/new-user.png" alt="Register">
+        </NuxtLink>
+      </div>
+    </ClientOnly>
+    <ClientOnly>
+      <div class="header__user-nav__item" v-if="user" @click="logout">
+        <NuxtLink class="header__user-nav__item__link" to="/">
+          <span class="header__user-nav__item__link-title">Logout</span>
+          <img class="header__user-nav__item__link-icon" src="@/src/logout.png" alt="Logout">
+        </NuxtLink>
+      </div>
+    </ClientOnly>
   </nav>
 </template>
+
+<script setup>
+const supabase = useSupabaseClient();
+const user = useSupabaseUser();
+
+const logout = async () => {
+  const { error } = await supabase.auth.signOut();
+
+  if (error) {
+    console.log(error);
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 @import "@/scss/main";
@@ -79,5 +104,3 @@
   }
 }
 </style>
-<script setup lang="ts">
-</script>
