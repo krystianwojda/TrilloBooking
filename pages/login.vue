@@ -48,7 +48,7 @@ const login = async () => {
   });
 
   if (error) {
-    console.log(error)
+    console.log(error);
   }
 
   navigateTo('/');

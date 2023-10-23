@@ -66,5 +66,192 @@
       "https://www.fvw.de/news/media/23/MSC-Explora-Indoor-Pool-220362.jpeg",
       "https://cdn.shopify.com/s/files/1/0127/0090/9632/files/27_1.png?v=1670931535"
     ]
+  },
+  {
+    "id": 5,
+    "name": "Iberostar Bella Costa",
+    "country": "Cuba",
+    "city": "Varadero",
+    "star": 4,
+    "price": 400,
+    "addCategory": "",
+    "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "important": ["Close to the beach", "Free airport transport", "Pets allowed", "Air conditiong and heating", "Breakfat included", "Wi-fi in rooms", "Free drinks", "We speak all languages"],
+    "images": [
+      "https://zdjecia-cdn.r.pl/hotel/4545/iberostar-bella-costa_4545_163972_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/4545/iberostar-bella-costa_4545_157459_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/4545/iberostar-bella-costa_4545_163969_3x2.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Kata Palm Spa",
+    "country": "Thailand",
+    "city": "Phuket",
+    "star": 4,
+    "price": 367,
+    "addCategory": "",
+    "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "important": ["Close to the beach", "Free airport transport", "Pets allowed", "Air conditiong and heating", "Breakfat included", "Wi-fi in rooms", "Free drinks", "We speak all languages"],
+    "images": [
+      "https://zdjecia-cdn.r.pl/hotel/104/kata-palm-resort-and-spa_104_168420_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/104/kata-palm-resort-and-spa_104_168410_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/104/kata-palm-resort-and-spa_104_168419_3x2.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Diamond Cliff Resort",
+    "country": "Thailand",
+    "city": "Phuket",
+    "star": 4,
+    "price": 480,
+    "addCategory": "",
+    "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "important": ["Close to the beach", "Free airport transport", "Pets allowed", "Air conditiong and heating", "Breakfat included", "Wi-fi in rooms", "Free drinks", "We speak all languages"],
+    "images": [
+      "https://zdjecia-cdn.r.pl/hotel/4050/diamond-cliff-resort_4050_197468_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/4050/diamond-cliff-resort_4050_197457_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/4050/diamond-cliff-resort_4050_197453_3x2.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Evenia Zoraida Beach",
+    "country": "Spain",
+    "city": "Costa Almeria",
+    "star": 4,
+    "price": 190,
+    "addCategory": "",
+    "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "important": ["Close to the beach", "Free airport transport", "Pets allowed", "Air conditiong and heating", "Breakfat included", "Wi-fi in rooms", "Free drinks", "We speak all languages"],
+    "images": [
+      "https://zdjecia-cdn.r.pl/hotel/5948/evenia-zoraida-beach-resort_5948_201862_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/5948/evenia-zoraida-beach-resort_5948_201847_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/5948/evenia-zoraida-beach-resort_5948_201846_3x2.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Osmine",
+    "country": "Croatia",
+    "city": "Dubrownik",
+    "star": 4,
+    "price": 220,
+    "addCategory": "",
+    "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "important": ["Close to the beach", "Free airport transport", "Pets allowed", "Air conditiong and heating", "Breakfat included", "Wi-fi in rooms", "Free drinks", "We speak all languages"],
+    "images": [
+      "https://zdjecia-cdn.r.pl/hotel/3692/osmine_3692_100761_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/3692/osmine_3692_177233_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/3692/osmine_3692_100759_3x2.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Hotel Punta",
+    "country": "Croatia",
+    "city": "Dalmatia",
+    "star": 4,
+    "price": 220,
+    "addCategory": "",
+    "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "important": ["Close to the beach", "Free airport transport", "Pets allowed", "Air conditiong and heating", "Breakfat included", "Wi-fi in rooms", "Free drinks", "We speak all languages"],
+    "images": [
+      "https://zdjecia-cdn.r.pl/hotel/6088/hotel-punta_6088_185926_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/6088/hotel-punta_6088_185927_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/6088/hotel-punta_6088_185925_3x2.jpg"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Pestana Casino Park",
+    "country": "Portugal",
+    "city": "Madera",
+    "star": 5,
+    "price": 370,
+    "addCategory": "",
+    "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "important": ["Close to the beach", "Free airport transport", "Pets allowed", "Air conditiong and heating", "Breakfat included", "Wi-fi in rooms", "Free drinks", "We speak all languages"],
+    "images": [
+      "https://zdjecia-cdn.r.pl/hotel/5060/pestana-casino-park_5060_192289_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/5060/pestana-casino-park_5060_192279_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/5060/pestana-casino-park_5060_192283_3x2.jpg"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Miramar Garden Resort",
+    "country": "Portugal",
+    "city": "Madera",
+    "star": 5,
+    "price": 399,
+    "addCategory": "",
+    "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "important": ["Close to the beach", "Free airport transport", "Pets allowed", "Air conditiong and heating", "Breakfat included", "Wi-fi in rooms", "Free drinks", "We speak all languages"],
+    "images": [
+      "https://zdjecia-cdn.r.pl/hotel/5054/pestana-village-and-miramar-garden-resort_5054_126831_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/5054/pestana-village-and-miramar-garden-resort_5054_126719_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/5054/pestana-village-and-miramar-garden-resort_5054_126832_3x2.jpg"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Savoy Palace",
+    "country": "Portugal",
+    "city": "Madera",
+    "star": 5,
+    "price": 399,
+    "addCategory": "",
+    "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "important": ["Close to the beach", "Free airport transport", "Pets allowed", "Air conditiong and heating", "Breakfat included", "Wi-fi in rooms", "Free drinks", "We speak all languages"],
+    "images": [
+      "https://zdjecia-cdn.r.pl/hotel/5080/savoy-palace_5080_126840_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/5080/savoy-palace_5080_126967_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/5080/savoy-palace_5080_126843_3x2.jpg"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Hotel Kalos",
+    "country": "Italy",
+    "city": "Sicily",
+    "star": 4,
+    "price": 210,
+    "addCategory": "",
+    "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "important": ["Close to the beach", "Free airport transport", "Pets allowed", "Air conditiong and heating", "Breakfat included", "Wi-fi in rooms", "Free drinks", "We speak all languages"],
+    "images": [
+      "https://zdjecia-cdn.r.pl/hotel/5925/hotel-kalos_5925_206430_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/5925/hotel-kalos_5925_206429_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/5925/hotel-kalos_5925_206432_3x2.jpg"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "UNA Hotels Naxos",
+    "country": "Italy",
+    "city": "Sicily",
+    "star": 4,
+    "price": 320,
+    "addCategory": "",
+    "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "important": ["Close to the beach", "Free airport transport", "Pets allowed", "Air conditiong and heating", "Breakfat included", "Wi-fi in rooms", "Free drinks", "We speak all languages"],
+    "images": [
+      "https://zdjecia-cdn.r.pl/hotel/397/una-hotels-naxos-beach-sicilia-ex-ata-hotel-naxos-beach_397_205982_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/397/una-hotels-naxos-beach-sicilia-ex-ata-hotel-naxos-beach_397_205983_3x2.jpg",
+      "https://zdjecia-cdn.r.pl/hotel/397/una-hotels-naxos-beach-sicilia-ex-ata-hotel-naxos-beach_397_205988_3x2.jpg"
+    ]
   }
 ]
