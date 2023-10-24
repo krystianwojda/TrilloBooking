@@ -1,8 +1,24 @@
 <template>
   <div>
-    <travel-cards/>
+    <travel-cards :travels="travels"/>
   </div>
 </template>
+
+<script setup>
+import useFetchTravels from "~/composables/useFetchTravels";
+
+const route = useRoute();
+const { data: travels, refresh} = await useFetchTravels(route.params.country, {
+  city: route.params.city
+});
+
+watch(
+    () => route.query,
+    () => {
+      window.location.reload(true)
+    }
+);
+</script>
 
 <style lang="scss" scoped>
 .content {
@@ -18,5 +34,3 @@
   }
 }
 </style>
-<script setup lang="ts">
-</script>

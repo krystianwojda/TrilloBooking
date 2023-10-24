@@ -1,7 +1,7 @@
 <template>
   <div class="cards">
     <div class="row">
-      <travel-card v-for="travel in data" :key="travel.id" :travel="travel" @favorItem="handleFavorite" :favored="travel.id in favorite"/>
+      <travel-card v-for="travel in travels" :key="travel.id" :travel="travel" @favorItem="handleFavorite" :favored="travel.id in favorite"/>
     </div>
   </div>
 </template>
@@ -18,9 +18,9 @@
 }
 </style>
 <script setup>
-import travels from '@/data/travels.json';
-
-const data = travels;
+const props = defineProps({
+  travels: Array
+})
 const favorite = useLocalStorage("favorite", {});
 const handleFavorite = (id) => {
   if (id in favorite.value) {
