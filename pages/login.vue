@@ -47,13 +47,17 @@ const login = async () => {
     password: password.value
   });
 
+  if (data.user.id  === '260a3d29-4084-4b66-aa15-2417c7d68a67') {
+    navigateTo('/profile/admin');
+  } else {
+    navigateTo('/');
+  }
+
   if (error) {
     console.log(error);
   }
-
-  navigateTo('/');
 };
-const loginGoogle = async () => {
+const loginGoogle = async (response) => {
   const { error } = supabase.auth.signInWithOAuth({
     provider: 'google'
   });
