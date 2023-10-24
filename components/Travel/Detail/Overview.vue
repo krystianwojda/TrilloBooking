@@ -41,8 +41,6 @@
 const props = defineProps({
   travel: Object
 });
-
-console.log(props.travel.star)
 </script>
 
 <style lang="scss" scoped>

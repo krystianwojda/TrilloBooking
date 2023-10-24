@@ -19,7 +19,7 @@
         <p>{{ travel.shortDescription }}</p>
       </div>
       <div class="card__button">
-        <button class="card__btn" @click="navigateTo(`/city/${travel.name}-${travel.id}`)">show detail</button>
+        <button class="card__btn" @click="navigateTo(`/travel/${travel.name}-${travel.id}`)">show detail</button>
       </div>
     </div>
   </div>
