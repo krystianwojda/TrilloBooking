@@ -11,27 +11,27 @@
         <ul class="sidebar__filters">
           <li class="sidebar__filters__item">
             <div class="sidebar__filters__item__box">
-              <label @click="updateModal('country')" class="sidebar__filters__item-label" for="country">Country</label>
-              <span class="sidebar__filters__item__box-value">{{ route.params.country }}</span>
+              <label class="sidebar__filters__item-label" for="country" @click="updateModal('country')">Country</label>
+              <span class="sidebar__filters__item__box-value">{{ route.params.country || 'All' }}</span>
             </div>
             <select class="sidebar__filters__item-input" id="country" v-model="country">
               <option value="All">All</option>
-              <option v-for="countryValue in filterCountry" :value="countryValue">{{ countryValue }}</option>
+              <option v-for="country in countries" :key="country">{{ country }}</option>
             </select>
           </li>
           <li class="sidebar__filters__item">
             <div class="sidebar__filters__item__box">
-              <label @click="updateModal('city')" class="sidebar__filters__item-label" for="city">City</label>
-              <span class="sidebar__filters__item__box-value">{{ route.params.name }}</span>
+              <label class="sidebar__filters__item-label" for="city" @click="updateModal('city')">City</label>
+              <span class="sidebar__filters__item__box-value">{{ route.params.city || 'All' }}</span>
             </div>
             <select class="sidebar__filters__item-input" id="city" v-model="city">
               <option value="All">All</option>
-              <option v-for="cityValue in filterCity" :value="cityValue">{{ cityValue }}</option>
+              <option v-for="city in cities" :key="city">{{ city }}</option>
             </select>
           </li>
         </ul>
         <div class="sidebar__check">
-          <button @click="onChangeCountry" class="sidebar__check-button">Apply</button>
+          <button class="sidebar__check-button" @click="onChange(country, city)">Apply</button>
         </div>
       </div>
     </nav>
@@ -174,14 +174,15 @@
   }
 }
 </style>
-<script setup>
-import travels from '@/data/travels.json';
 
-const filterCountry = travels.map(c => c.country);
-const filterCity = travels.map(c => c.city);
+<script setup>
+import countries from '@/data/country.json';
+import cities from '@/data/city.json';
 
 const isOpen = ref(true);
-
+const country = ref('');
+const city = ref('');
+const route = useRoute();
 const showMenu = () => {
   isOpen.value = !isOpen.value;
 }
@@ -189,22 +190,16 @@ const showMenu = () => {
 const modal = ref({
   country: false,
   city: false,
-  price: false,
-
 });
 
-const country = ref('');
-const city = ref('');
-const route = useRoute();
 
 const updateModal = key => {
   modal.value[key] = !modal.value[key];
 }
 
-const onChangeCountry = () => {
-  if (!country.value) return;
+const onChange = (country, city) => {
   updateModal('country');
   updateModal('city');
-  navigateTo(`/country/${country.value}/city/${city.value}`);
+  navigateTo(`/country/${country}/city/${city}`)
 };
 </script>
