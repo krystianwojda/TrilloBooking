@@ -40,21 +40,6 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
               <div class="card">
                 <div class="card__img">
-                  <img src="@/src/group.png" alt="all users">
-                </div>
-                <div class="card__description">
-                  <p>View all registered users</p>
-                </div>
-                <div class="card__button">
-                  <NuxtLink to="/profile/admin/travels">
-                    <button>All users</button>
-                  </NuxtLink>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
-              <div class="card">
-                <div class="card__img">
                   <img src="@/src/order.png" alt="orders">
                 </div>
                 <div class="card__description">
