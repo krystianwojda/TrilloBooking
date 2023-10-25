@@ -11,13 +11,6 @@ const route = useRoute();
 const { data: travels, refresh} = await useFetchTravels(route.params.country, {
   city: route.params.city
 });
-
-watch(
-    () => route.query,
-    () => {
-      window.location.reload(true)
-    }
-);
 </script>
 
 <style lang="scss" scoped>
