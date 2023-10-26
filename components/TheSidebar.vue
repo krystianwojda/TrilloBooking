@@ -16,7 +16,7 @@
             </div>
             <select class="sidebar__filters__item-input" id="country" v-model="country">
               <option value="All">All</option>
-              <option v-for="country in countries" :key="country">{{ country }}</option>
+              <option v-for="country in removeDuplicate(countries)" :key="country">{{ country }}</option>
             </select>
           </li>
           <li class="sidebar__filters__item">
@@ -26,7 +26,7 @@
             </div>
             <select class="sidebar__filters__item-input" id="city" v-model="city">
               <option value="All">All</option>
-              <option v-for="city in cities" :key="city">{{ city }}</option>
+              <option v-for="city in removeDuplicate(cities)" :key="city">{{ city }}</option>
             </select>
           </li>
         </ul>
@@ -176,8 +176,14 @@
 </style>
 
 <script setup>
-import countries from '@/data/country.json';
-import cities from '@/data/city.json';
+import travels from '@/data/travels.json';
+
+const countries = travels.map(c => c.country);
+const cities = travels.map(c => c.city);
+
+const removeDuplicate = (data) => {
+  return data.filter((value, index) => data.indexOf(value) === index);
+};
 
 const isOpen = ref(true);
 const country = ref('');
