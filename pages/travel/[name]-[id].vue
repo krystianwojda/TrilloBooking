@@ -27,6 +27,18 @@
   </section>
 </template>
 
+<script setup>
+import useFetchTravel from "~/composables/useFetchTravel";
+
+const route = useRoute();
+
+useHead({
+  title: route.params.name
+});
+
+const { data: travel } = await useFetchTravel(route.params.id);
+</script>
+
 <style lang="scss" scoped>
 @import "@/scss/main";
 
@@ -60,27 +72,3 @@
   }
 }
 </style>
-
-<script setup>
-import travels from '@/data/travels.json';
-
-const route = useRoute();
-const data = travels;
-
-useHead({
-  title: route.params.name
-});
-
-const travel = computed(() => {
-  return data.find((t) => {
-    return t.id === parseInt(route.params.id)
-  })
-})
-
-if (!travel.value) {
-  throw createError({
-    statusCode: 404,
-    statusMessage: `Car witch ID ${route.params.id} does not exist`
-  });
-}
-</script>
