@@ -67,7 +67,7 @@ const logout = async () => {
 
       @media screen and (max-width: 576px) {
         height: 5rem;
-        padding: 0 0.5rem;
+        padding: 0 .5rem;
       }
     }
 
@@ -88,7 +88,7 @@ const logout = async () => {
 
           @media screen and (max-width: 576px) {
             font-size: 1.5rem;
-            margin-right: 5rem;
+            margin-right: .5rem;
           }
         }
 
