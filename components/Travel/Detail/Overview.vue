@@ -156,6 +156,10 @@ const props = defineProps({
     &-count {
       text-transform: uppercase;
       font-size: 1rem;
+
+      @media screen and (max-width: 767px) {
+        text-align: center;
+      }
     }
   }
 }
