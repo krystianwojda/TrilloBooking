@@ -22,11 +22,10 @@
           <li class="sidebar__filters__item">
             <div class="sidebar__filters__item__box">
               <label class="sidebar__filters__item-label" for="city" @click="updateModal('city')">City</label>
-              <span class="sidebar__filters__item__box-value">{{ route.params.city || 'All' }}</span>
+              <span class="sidebar__filters__item__box-value">{{ route.params.city }}</span>
             </div>
             <select class="sidebar__filters__item-input" id="city" v-model="city">
-              <option value="All">All</option>
-              <option v-for="city in removeDuplicate(cities)" :key="city">{{ city }}</option>
+              <option v-for="city in removeDuplicate(citiesInSelectedCountry)" :key="city">{{ city }}</option>
             </select>
           </li>
         </ul>
@@ -42,6 +41,50 @@
   </section>
 </template>
 
+<script setup>
+import travels from '@/data/travels.json';
+
+const countries = travels.map(c => c.country);
+const cities = travels.map(c => c.city);
+
+const citiesInSelectedCountry = computed(() => {
+  if (country.value === 'All') {
+    removeDuplicate(cities);
+  } else {
+    return cities.filter(city => {
+      return travels.some(travel => travel.country === country.value && travel.city === city);
+    });
+  }
+});
+
+const removeDuplicate = (data) => {
+  return data.filter((value, index) => data.indexOf(value) === index);
+};
+
+const isOpen = ref(true);
+const country = ref('');
+const city = ref('');
+const route = useRoute();
+const showMenu = () => {
+  isOpen.value = !isOpen.value;
+}
+
+const modal = ref({
+  country: false,
+  city: false,
+});
+
+
+const updateModal = key => {
+  modal.value[key] = !modal.value[key];
+}
+
+const onChange = (country, city) => {
+  updateModal('country');
+  updateModal('city');
+  navigateTo(`/country/${country}/city/${city}`)
+};
+</script>
 
 <style lang="scss" scoped>
 @import "scss/main";
@@ -174,38 +217,3 @@
   }
 }
 </style>
-
-<script setup>
-import travels from '@/data/travels.json';
-
-const countries = travels.map(c => c.country);
-const cities = travels.map(c => c.city);
-
-const removeDuplicate = (data) => {
-  return data.filter((value, index) => data.indexOf(value) === index);
-};
-
-const isOpen = ref(true);
-const country = ref('');
-const city = ref('');
-const route = useRoute();
-const showMenu = () => {
-  isOpen.value = !isOpen.value;
-}
-
-const modal = ref({
-  country: false,
-  city: false,
-});
-
-
-const updateModal = key => {
-  modal.value[key] = !modal.value[key];
-}
-
-const onChange = (country, city) => {
-  updateModal('country');
-  updateModal('city');
-  navigateTo(`/country/${country}/city/${city}`)
-};
-</script>
