@@ -37,6 +37,8 @@ const logout = async () => {
   if (error) {
     console.log(error);
   }
+
+  navigateTo('/');
 };
 </script>
 
@@ -65,7 +67,7 @@ const logout = async () => {
 
       @media screen and (max-width: 576px) {
         height: 5rem;
-        padding: 0 .5rem;
+        padding: 0 0.5rem;
       }
     }
 
